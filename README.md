@@ -1,4 +1,4 @@
-# terraform-http-duo-ips ![](https://img.shields.io/badge/license-MIT-blue.svg)
+# terraform-data-duo-ips ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
 This module provides an updated list of Duo's public CIDRs. These are maintained against the Duo Documentation: https://help.duo.com/s/article/1337
 
@@ -6,7 +6,7 @@ This module provides an updated list of Duo's public CIDRs. These are maintained
 
 ```hcl
 module "duo-ips" {
-  source  = "captn3m0/duo-ips/http"
+  source  = "captn3m0/duo-ips/data"
   version = "1.0.2"
 }
 
