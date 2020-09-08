@@ -1,5 +1,5 @@
 output "cidrs" {
-  description = "List of all Duo Service CIDRs. Whitelist for egress"
+  description = "List of all Duo Service CIDRs. Allow for egress to Duo"
 
   value = [
     "54.241.191.128/26",
@@ -8,11 +8,12 @@ output "cidrs" {
     "52.32.63.128/26",
     "52.59.243.192/26",
     "35.182.14.128/26",
+    "3.25.48.128/26"
   ]
 }
 
 output "trusted_endpoints_cidrs" {
-  description = "List of Duo's Trusted Endpoint CIDRs. Whitelist for ingress"
+  description = "List of Duo's Trusted Endpoint CIDRs. Allow for ingress from Duo"
 
   value = [
     "13.56.32.240/29",
@@ -21,4 +22,19 @@ output "trusted_endpoints_cidrs" {
     "52.59.243.200/30",
     "35.182.14.128/30",
   ]
+}
+
+output "ad_hostnames_ca" {
+  description = "Map of Duo's Microsoft Azure Active Directory Conditional Access application for Canada deployments"
+  values      = ["http://cc1.azureauth.duosecurity.com/"]
+}
+
+output "ad_hostnames_eu" {
+  description = "Map of Duo's Microsoft Azure Active Directory Conditional Access application for Europe deployments"
+  values      = ["http://ec1.azureauth.duosecurity.com/", "http://eu-west.azureauth.duosecurity.com/"]
+}
+
+output "duo_ad_hostnames_us" {
+  description = "Map of Duo's Microsoft Azure Active Directory Conditional Access application for US deployments"
+  values      = ["http://us.azureauth.duosecurity.com/"]
 }
