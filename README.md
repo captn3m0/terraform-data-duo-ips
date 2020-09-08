@@ -1,6 +1,8 @@
 # terraform-http-duo-whitelist ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
-This module provides an updated list of Duo's public CIDRs. These are maintained against the Duo Documentation: https://help.duo.com/s/article/1337
+This module provides an updated list of Duo's public CIDRs. These are maintained against the Duo Documentation: https://help.duo.com/s/article/1337.
+
+*NOTE*: This module has been renamed to <https://registry.terraform.io/modules/captn3m0/duo-ips>. Please use that for future updates.
 
 # Usage
 
