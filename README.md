@@ -7,7 +7,7 @@ This module provides an updated list of Duo's public CIDRs. These are maintained
 ```hcl
 module "duo-ips" {
   source  = "captn3m0/duo-ips/data"
-  version = "1.0.2"
+  version = "1.0.3"
 }
 
 resource "aws_security_group_rule" "allow_all_to_duo" {
@@ -19,6 +19,12 @@ resource "aws_security_group_rule" "allow_all_to_duo" {
   security_group_id = "sg-123456"
 }
 ```
+
+## Changelog
+
+### 1.0.3
+
+- Renamed `duo_ad_hostnames_us` to `ad_hostnames_us`
 
 ## Outputs
 
@@ -36,7 +42,7 @@ Description: Map of Duo's Microsoft Azure Active Directory Conditional Access ap
 
 Description: List of all Duo Service CIDRs. Allow for egress to Duo
 
-### duo\_ad\_hostnames\_us
+### ad\_hostnames\_us
 
 Description: Map of Duo's Microsoft Azure Active Directory Conditional Access application for US deployments
 

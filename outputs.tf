@@ -31,10 +31,12 @@ output "ad_hostnames_ca" {
 
 output "ad_hostnames_eu" {
   description = "Map of Duo's Microsoft Azure Active Directory Conditional Access application for Europe deployments"
-  values      = ["http://ec1.azureauth.duosecurity.com/", "http://eu-west.azureauth.duosecurity.com/"]
+  values = [
+    "http://ec1.azureauth.duosecurity.com/", "http://eu-west.azureauth.duosecurity.com/"
+  ]
 }
 
-output "duo_ad_hostnames_us" {
+output "ad_hostnames_us" {
   description = "Map of Duo's Microsoft Azure Active Directory Conditional Access application for US deployments"
   values      = ["http://us.azureauth.duosecurity.com/"]
 }
