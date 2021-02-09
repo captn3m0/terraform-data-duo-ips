@@ -24,6 +24,7 @@ resource "aws_security_group_rule" "allow_all_to_duo" {
 
 ### 1.0.3
 
+- Changed the terraform registry module name from [`duo-whitelist`](https://registry.terraform.io/modules/captn3m0/duo-whitelist) to [`duo-ips`](https://registry.terraform.io/modules/captn3m0/duo-ips).
 - Renamed `duo_ad_hostnames_us` to `ad_hostnames_us`
 
 ## Outputs
