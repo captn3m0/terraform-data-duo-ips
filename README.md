@@ -1,4 +1,4 @@
-# terraform-data-duo-ips ![](https://img.shields.io/badge/license-MIT-blue.svg)
+# terraform-data-duo-ips ![License:MIT](https://img.shields.io/badge/license-MIT-blue.svg) ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/captn3m0/terraform-data-duo-ips?sort=semver) ![GitHub last commit](https://img.shields.io/github/last-commit/captn3m0/terraform-data-duo-ips)
 
 This module provides an updated list of Duo's public CIDRs. These are maintained against the Duo Documentation: https://help.duo.com/s/article/1337
 
