@@ -44,6 +44,6 @@ output "ad_hostnames_us" {
 }
 
 output "ad_hostnames_au" {
-  description = "Map of Duo's Microsoft Azure Active Directory Conditional Access application for US deployments"
+  description = "Map of Duo's Microsoft Azure Active Directory Conditional Access application for AU deployments"
   values      = ["ase2.azureauth.duosecurity.com"]
 }
