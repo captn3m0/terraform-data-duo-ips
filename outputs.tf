@@ -21,22 +21,29 @@ output "trusted_endpoints_cidrs" {
     "52.19.127.200/30",
     "52.59.243.200/30",
     "35.182.14.128/30",
+    "3.24.48.188/30"
   ]
 }
 
 output "ad_hostnames_ca" {
   description = "Map of Duo's Microsoft Azure Active Directory Conditional Access application for Canada deployments"
-  values      = ["http://cc1.azureauth.duosecurity.com/"]
+  values      = ["cc1.azureauth.duosecurity.com"]
 }
 
 output "ad_hostnames_eu" {
   description = "Map of Duo's Microsoft Azure Active Directory Conditional Access application for Europe deployments"
   values = [
-    "http://ec1.azureauth.duosecurity.com/", "http://eu-west.azureauth.duosecurity.com/"
+    "ec1.azureauth.duosecurity.com",
+    "eu-west.azureauth.duosecurity.com"
   ]
 }
 
 output "ad_hostnames_us" {
   description = "Map of Duo's Microsoft Azure Active Directory Conditional Access application for US deployments"
-  values      = ["http://us.azureauth.duosecurity.com/"]
+  values      = ["us.azureauth.duosecurity.com"]
+}
+
+output "ad_hostnames_au" {
+  description = "Map of Duo's Microsoft Azure Active Directory Conditional Access application for US deployments"
+  values      = ["ase2.azureauth.duosecurity.com"]
 }
