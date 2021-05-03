@@ -7,7 +7,7 @@ This module provides an updated list of Duo's public CIDRs. These are maintained
 ```hcl
 module "duo-ips" {
   source  = "captn3m0/duo-ips/data"
-  version = "1.0.3"
+  version = "1.1.0"
 }
 
 resource "aws_security_group_rule" "allow_all_to_duo" {
@@ -21,6 +21,10 @@ resource "aws_security_group_rule" "allow_all_to_duo" {
 ```
 
 ## Changelog
+
+### 1.1.0
+
+- Removed `http://` from hostname values.
 
 ### 1.0.3
 
