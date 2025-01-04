@@ -34,6 +34,16 @@ resource "aws_security_group_rule" "allow_all_to_duo_uk" {
   security_group_id = "sg-123456"
 }
 
+// Limit MFA traffic as per your DUO Deployment ID
+resource "aws_security_group_rule" "allow_all_to_duo_auth" {
+  type              = "egress"
+  from_port         = 0
+  to_port           = 443
+  protocol          = "tcp"
+  cidr_blocks       = module.duo-ips.auth_cidr_by_deployment["DUO48"]
+  security_group_id = "sg-123456"
+}
+
 // trusted endpoint requests are made from these ranges
 // depending on what port your origin is using, pick the correct port here as well.
 resource "aws_security_group_rule" "allow_all_from_duo_in_ingress" {

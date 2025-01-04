@@ -44,6 +44,11 @@ locals {
     "13.40.93.64/26",
   ]
 
+  uae-cidrs = [
+    "51.112.11.128/26",
+    "16.24.91.0/26"
+  ]
+
   trusted-endpoint-us-cidrs = [
     "13.56.32.240/29",
     "52.32.63.176/30"
@@ -78,6 +83,10 @@ locals {
 
   trusted-endpoint-uk-cidrs = [
     "13.40.93.124/30"
+  ]
+
+  trusted-endpoint-uae-cidrs = [
+    "51.112.11.135/30"
   ]
 
 }
