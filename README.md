@@ -10,7 +10,7 @@ Supported on both Terraform and OpenTofu.
 // Import the module
 module "duo-ips" {
   source  = "captn3m0/duo-ips/data"
-  version = "1.3.0"
+  version = "1.5.0"
 }
 
 // Allow traffic for MFA APIs for all region CIDRs
@@ -55,7 +55,7 @@ resource "aws_security_group_rule" "allow_all_from_duo_in_ingress" {
   security_group_id = "sg-123456"
 }
 ```
-
+<!-- BEGIN_TF_DOCS -->
 ## Outputs
 
 | Name | Description |
@@ -88,8 +88,13 @@ resource "aws_security_group_rule" "allow_all_from_duo_in_ingress" {
 | trusted\_endpoints\_cidrs | List of Duo's Trusted Endpoint CIDRs. Allow for ingress from Duo |
 | uk-cidrs | List of Duo's Service CIDRs for UK deployments |
 | us-cidrs | List of Duo's Service CIDRs for US deployments |
+<!-- END_TF_DOCS -->
 
 ## Changelog
+
+### 1.5.0
+- Added `ad_hostnames_uae`
+- Updated Canada, Australia, Southeast-Asia deployment CIDRs
 
 ### 1.3.0
 - Added new outputs for various regions

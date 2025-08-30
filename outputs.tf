@@ -248,3 +248,8 @@ output "ad_hostnames_in" {
   description = "List of Duo's Microsoft Entra ID Conditional Access hostnames (formerly Azure Conditional Access) for IND deployments"
   value       = ["as1.azureauth.duosecurity.com"]
 }
+
+output "ad_hostnames_uae" {
+  description = "List of Duo's Microsoft Entra ID Conditional Access hostnames (formerly Azure Conditional Access) for UAE deployments"
+  value       = ["mc1.azureauth.duosecurity.com"]
+}
